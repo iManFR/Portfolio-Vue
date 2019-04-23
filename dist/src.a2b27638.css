@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+.home-view[data-v-ca01ce] {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+.home-view h1[data-v-ca01ce] {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Vendetta", sans-serif;
+  font-size: 10vw;
+  white-space: nowrap;
+}
+.home-view h2[data-v-ca01ce] {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Staatliches", cursive;
+  font-size: 42px;
+  font-weight: 100;
+  text-align: center;
+}
+.home-view .scroll[data-v-ca01ce] {
+  position: absolute;
+  bottom: 0%;
+  right: 2%;
+  z-index: 1;
+}
+.home-view .scroll p[data-v-ca01ce] {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  transform: rotate(90deg);
+  margin-bottom: 43px;
+  white-space: nowrap;
+}
+.home-view .scroll .vl_contain[data-v-ca01ce] {
+  width: 100%;
+  min-height: 80px;
+}
+.home-view .scroll .vl_contain .vl[data-v-ca01ce] {
+  border-left: 1px solid black;
+  min-height: 55px;
+  position: absolute;
+  left: 50%;
+  margin-left: 0px;
+  bottom: 0;
+}
+.home-view.hide[data-v-ca01ce] {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+.header[data-v-1c2def] {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding: 25px 0px 25px 35px;
+}
+.header h1[data-v-1c2def] {
+  font-family: "Vendetta", sans-serif;
+  font-size: 32px;
+}
+.header .about-link a[data-v-1c2def] {
+  font-family: "Staatliches", cursive;
+  font-size: 24px;
+  text-decoration: none;
+  color: #000;
+}
+.header .about-link a[data-v-1c2def]:after {
+  content: "";
+  display: inline-block;
+  height: 0.6em;
+  vertical-align: bottom;
+  width: 70px;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid black;
+  transition: width 0.5s ease-in-out;
+}
+.header .about-link a[data-v-1c2def]:hover::after {
+  content: "";
+  display: inline-block;
+  height: 0.6em;
+  vertical-align: bottom;
+  width: 40px;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid black;
+}
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+.works-slider[data-v-534e32] {
+  display: none !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100vw;
+  height: 78vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+.footer[data-v-546030] {
+  position: absolute;
+  bottom: 0;
+  /*bottom: 3.5vh;
+  left: 3vw;*/
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 35px;
+}
+.footer nav ul[data-v-546030] {
+  display: flex;
+  flex-direction: row;
+}
+.footer nav ul li a[data-v-546030] {
+  margin-right: 47px;
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+.footer a[data-v-546030] {
+  text-decoration: none;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  color: #000;
+}
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+.main-view[data-v-5ece72] {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  transition: all 1s ease-in-out;
+}
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+.about-view[data-v-50a5ee] {
+  transition: all 1s ease-in-out;
+}
+.about-view .backworks-button[data-v-50a5ee] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px 0px 25px 35px;
+  z-index: 10;
+}
+.about-view .backworks-button a[data-v-50a5ee] {
+  font-family: "Staatliches", cursive;
+  font-size: 24px;
+  text-decoration: none;
+}
+.about-view .backworks-button a[data-v-50a5ee]:after {
+  content: "";
+  display: inline-block;
+  height: 0.6em;
+  vertical-align: bottom;
+  width: 70px;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid black;
+  transition: width 0.5s ease-in-out;
+}
+.about-view .backworks-button a[data-v-50a5ee]:hover::after {
+  content: "";
+  display: inline-block;
+  height: 0.6em;
+  vertical-align: bottom;
+  width: 40px;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid black;
+}
+.about-view .about-build[data-v-50a5ee] {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.about-view .about-build .about-picture[data-v-50a5ee] {
+  height: 100vh;
+  width: 100%;
+}
+.about-view .about-build .about-text[data-v-50a5ee] {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-view .about-build .about-text p[data-v-50a5ee] {
+  width: 70%;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+.lines[data-v-08681d] {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  z-index: -10;
+}
+.lines .vertical-lines[data-v-08681d] {
+  height: 100vh;
+  width: calc(100vw/6);
+  border-right: 1px solid #cacaca;
+  opacity: 0.4;
+}
+@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css';
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+body, html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+*::selection {
+  background-color: black;
+  color: white;
+}

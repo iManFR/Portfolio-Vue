@@ -1,0 +1,35 @@
+{
+  "name": "portfolio-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html --open",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iManFR/Portfolio-Vue.git"
+  },
+  "author": "Manolo Pecout",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iManFR/Portfolio-Vue/issues"
+  },
+  "homepage": "https://github.com/iManFR/Portfolio-Vue#readme",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.19.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "components": "^0.1.0",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3",
+    "vue-router": "^3.0.6"
+  },
+  "alias": {
+    "vue": "./node_modules/vue/dist/vue.common.js"
+  }
+}
