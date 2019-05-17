@@ -1,18 +1,26 @@
 <template>
-    <div class="home-view">
-        <h1>Manolo Pecout</h1>
-        <router-link tag="a" to="/work"><h2>Hi I'm Manolo, A Web developer and designer</h2></router-link>
-        <div class="scroll">
-            <p>scroll down</p>
-            <div class="vl_contain">
-                <div class="vl"></div>
+    <transition
+            name="home-leave"
+            leave-active-class="animated fadeOutUp"
+        >
+        <div class="home" v-on:wheel="scrollWork">
+            <h1>Manolo Pecout</h1>
+            <h2>Hi I'm Manolo, A Web developer and designer</h2>
+            <div class="scroll">
+                <p>scroll down</p>
+                <div class="vl_contain">
+                    <div class="vl"></div>
+                </div>
             </div>
         </div>
-    </div>
+    </transition>
 </template>
 
 <script>
 import Home from './Home.vue'
+
+import Router from 'vue-router'
+
 
 export default {
 	components: {
@@ -24,17 +32,17 @@ export default {
         }
     },
     methods: {
-		showWork(){
-            
+        scrollWork (event) {
+            this.$router.push('/work')
         }
-	},
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 @import '../../styles/variables.scss';
 
-.home-view{
+.home{
     //display: none;
     position: absolute;
     height: 100vh;
@@ -66,6 +74,9 @@ export default {
         bottom: 0%;
         right: 2%;
         z-index: 1;
+        a{
+            text-decoration: none;
+        }
         p{
             font-family: $font-text;
             font-weight: 300;

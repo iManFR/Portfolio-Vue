@@ -1,22 +1,31 @@
 <template>
-    <div class="main-view">
-        <WorkHeader></WorkHeader>
-        <WorkSlider></WorkSlider>
-        <WorkFooter></WorkFooter>
-    </div>
+    <transition
+            name="show-view"
+            enter-active-class="animated fadeIn"
+            leave-active-class="animated fadeOut"
+        >
+        <div class="work">
+            <WorkHeader></WorkHeader>
+            <Slider></Slider>
+            <!-- <WorkMenu></WorkMenu> -->
+            <WorkFooter></WorkFooter>
+        </div>
+    </transition>
 </template>
 
 <script>
 import Work from './Work.vue'
 import WorkHeader from './WorkHeader.vue'
-import WorkSlider from './WorkSlider.vue'
+import Slider from './Slider/Slider.vue'
+//import WorkMenu from './WorkMenu.vue'
 import WorkFooter from './WorkFooter.vue'
 
 export default {
 	components: {
         Work,
         WorkHeader,
-        WorkSlider,
+        Slider,
+        //WorkMenu,
         WorkFooter,
     },
 }
@@ -25,8 +34,7 @@ export default {
 <style lang="scss" scoped>
 @import '../../styles/variables.scss';
 
-.main-view{
-    //display: block;
+.work{
     position: absolute;
     height: 100vh;
     width: 100vw;

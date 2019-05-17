@@ -11,7 +11,7 @@ const router = new Router({
   mode: 'history',
 })
 
-// Vue.config.productionTip = false
+//Vue.config.productionTip = false
 
 const app = new Vue({
   router,

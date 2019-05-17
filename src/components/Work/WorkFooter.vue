@@ -1,15 +1,15 @@
 <template>
     <div class="footer">
-        <nav class="animated fadeInLeft">
+        <nav>
             <ul>
                 <li><a target="_blank" href="https://www.instagram.com/manolo_pecout/">Instagram</a></li>
                 <li><a target="_blank" href="https://www.facebook.com/man.olo.378">Facebook</a></li>
                 <li><a target="_blank" href="#">Twitter</a></li>
-                <li><a target="_blank" href="https://dribbble.com/iManFR">Dribble</a></li>
+                <li><a target="_blank" href="https://dribbble.com/iManFR">Dribbble</a></li>
                 <li><a target="_blank" href="https://www.behance.net/manolopecoee2b">Behance</a></li>
             </ul>
         </nav>
-        <a href="mailto:manolo.p@hotmail.fr" class="animated fadeInRight">Contact</a>
+        <a href="mailto:manolo.p@hotmail.fr">Contact</a>
     </div>
 </template>
 

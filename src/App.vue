@@ -1,6 +1,12 @@
 <template>
 	<div id="app">
-		<router-view></router-view>
+        <transition
+            name="show-view"
+            enter-active-class="animated fadeIn"
+            leave-active-class="animated fadeOut"
+            >
+		    <router-view></router-view>
+        </transition>
         <Lines></Lines>
 	</div>
 </template>
@@ -22,7 +28,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css';
 @import './styles/variables.scss';
 
 body,html{

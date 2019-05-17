@@ -1,0 +1,28 @@
+{
+	"slides": [
+		{
+            "id": 0,
+            "title": "The Wild Bazar",
+            "desc": "lorem ipsum",
+            "date": "April 2019",
+            "skills": "Prestashop",
+            "client": "Les petites productions",
+            "role": "Dev, Design",
+            "url": "https://www.thewildbazar.com",
+            "illustration": "assets/img/",
+            "color": "#"
+        },
+        {
+            "id": 1,
+            "title": "Mosaïculture",
+            "desc": "lorem ipsum",
+            "date": "June 2018",
+            "skills": "Html/Css/Js",
+            "client": "Janic Gourlet",
+            "role": "Dev, Design",
+            "url": "https://www.janicgourlet.fr",
+            "illustration": "assets/img/",
+            "color": "#"
+        }
+	]
+}

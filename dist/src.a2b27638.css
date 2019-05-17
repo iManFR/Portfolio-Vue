@@ -2,7 +2,7 @@
   font-family: "Vendetta";
   src: url("/Vendetta.33c1f192.otf");
 }
-.home-view[data-v-ca01ce] {
+.home[data-v-ca01ce] {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -10,7 +10,7 @@
   transition: all 1s ease-in-out;
   opacity: 1;
 }
-.home-view h1[data-v-ca01ce] {
+.home h1[data-v-ca01ce] {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -19,7 +19,7 @@
   font-size: 10vw;
   white-space: nowrap;
 }
-.home-view h2[data-v-ca01ce] {
+.home h2[data-v-ca01ce] {
   position: absolute;
   top: 78%;
   left: 50%;
@@ -29,13 +29,16 @@
   font-weight: 100;
   text-align: center;
 }
-.home-view .scroll[data-v-ca01ce] {
+.home .scroll[data-v-ca01ce] {
   position: absolute;
   bottom: 0%;
   right: 2%;
   z-index: 1;
 }
-.home-view .scroll p[data-v-ca01ce] {
+.home .scroll a[data-v-ca01ce] {
+  text-decoration: none;
+}
+.home .scroll p[data-v-ca01ce] {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 300;
   font-size: 20px;
@@ -43,11 +46,11 @@
   margin-bottom: 43px;
   white-space: nowrap;
 }
-.home-view .scroll .vl_contain[data-v-ca01ce] {
+.home .scroll .vl_contain[data-v-ca01ce] {
   width: 100%;
   min-height: 80px;
 }
-.home-view .scroll .vl_contain .vl[data-v-ca01ce] {
+.home .scroll .vl_contain .vl[data-v-ca01ce] {
   border-left: 1px solid black;
   min-height: 55px;
   position: absolute;
@@ -107,8 +110,79 @@
   font-family: "Vendetta";
   src: url("/Vendetta.33c1f192.otf");
 }
-.works-slider[data-v-534e32] {
-  display: none !important;
+.work-info[data-v-dd7338] {
+  position: absolute;
+  left: -180px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  transform: rotate(-90deg);
+}
+.work-info .work-info-item[data-v-dd7338] {
+  margin: 0px 20px;
+  transition: all 0.6s ease-in-out;
+  will-change: transform;
+}
+.work-info .work-info-item[data-v-dd7338]:hover {
+  transform: rotate(90deg);
+}
+.work-info .work-info-title[data-v-dd7338] {
+  font-family: "Staatliches", cursive;
+  font-size: 18px;
+  margin: 5px 0px;
+}
+.work-info .work-info-content[data-v-dd7338] {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  margin: 5px 0px;
+}
+@font-face {
+  font-family: "Vendetta";
+  src: url("/Vendetta.33c1f192.otf");
+}
+.slider-selector[data-v-aad45f] {
+  position: absolute;
+  right: -25px;
+  height: 40%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+.slider-selector .work-current[data-v-aad45f] {
+  font-size: 20px;
+}
+.slider-selector .allworks-button[data-v-aad45f] {
+  transform: rotate(90deg);
+  font-size: 16px;
+  text-decoration: none;
+}
+.slider-selector .allworks-button[data-v-aad45f]:before {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 45px;
+  margin-right: 20px;
+  border-top: 1px solid black;
+}
+.slider-selector .allworks-button[data-v-aad45f]:after {
+  content: "";
+  display: inline-block;
+  height: 0.5em;
+  vertical-align: bottom;
+  width: 45px;
+  margin-right: -100%;
+  margin-left: 20px;
+  border-top: 1px solid black;
+}
+.slider-selector .work-total[data-v-aad45f] {
+  font-size: 20px;
+}
+.slider-container[data-v-a2f68c] {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -153,7 +227,7 @@
   font-family: "Vendetta";
   src: url("/Vendetta.33c1f192.otf");
 }
-.main-view[data-v-5ece72] {
+.work[data-v-5ece72] {
   position: absolute;
   height: 100vh;
   width: 100vw;
@@ -239,7 +313,6 @@
   border-right: 1px solid #cacaca;
   opacity: 0.4;
 }
-@import 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css';
 @font-face {
   font-family: "Vendetta";
   src: url("/Vendetta.33c1f192.otf");

@@ -1,23 +1,27 @@
 <template>
-
+    <div class="slider-container">
+        <SliderInfo></SliderInfo>
+        <SliderSelector></SliderSelector>
+    </div>
 </template>
 
 <script>
-import WorkSlider from './WorkSlider.vue'
+import SliderInfo from './SliderInfo.vue'
+import SliderSelector from './SliderSelector.vue'
+
+const slides = require('./slides.json').slides
 
 export default {
 	components: {
-		WorkSlider
+        SliderInfo,
+        SliderSelector,
     },
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/variables.scss';
 
-.works-slider{
-    display: none !important;
-    //display: block;
+.slider-container{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);

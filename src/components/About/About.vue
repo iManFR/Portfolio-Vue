@@ -8,7 +8,7 @@
 
             </div>
             <div class="about-text">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae doloremque illum culpa officiis architecto ab, aliquid laudantium omnis numquam facere odio harum accusamus autem, dignissimos similique obcaecati minima qui commodi.</p>
+                <p>{{text}}</p>
             </div>
         </div>
         <WorkFooter></WorkFooter>
@@ -20,6 +20,11 @@ import About from './About.vue'
 import WorkFooter from '../Work/WorkFooter.vue'
 
 export default {
+    data() {
+        return {
+            text: "Salut à tous, je vous toz !",
+        }
+    },
 	components: {
         About,
         WorkFooter,
