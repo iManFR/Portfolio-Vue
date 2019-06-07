@@ -1,19 +1,77 @@
 <template>
-    <div class="slider-container">
+    <div v-on:wheel="nextSlide" class="slider-container">
         <SliderInfo></SliderInfo>
+        <!-- <SliderIllustration 
+            v-for="_slide in slides"
+            v-bind:key="_slide.id"
+            v-bind:title="_slide.title"
+            v-bind:date="_slide.date"
+            v-bind:skills="_slide.skills"
+            v-bind:role="_slide.role">
+        </SliderIllustration> -->
+        <SliderIllustration></SliderIllustration>
         <SliderSelector></SliderSelector>
     </div>
 </template>
 
 <script>
 import SliderInfo from './SliderInfo.vue'
+import SliderIllustration from './SliderIllustration.vue'
 import SliderSelector from './SliderSelector.vue'
+
+import SliderStore from '../../../stores/SliderStore.js'
 
 const slides = require('./slides.json').slides
 
 export default {
+
+    beforeCreate(){
+        this.slides = slides
+    },
+
+    data(){
+        return {
+            state: SliderStore.state,
+        }
+    },
+
+    computed: {
+        currentSlideId() {
+            return this.state.currentSlideId
+        }
+    },
+
+    methods: {
+        nextSlide(){
+            this.goToSlide(this.currentSlideId + 1)
+        },
+
+        prevSlide(){
+            this.goToSlide(this.currentSlideId - 1)
+        },
+
+        goToSlide(slideId){
+            let lastSlideId = this.currentSlideId
+            let direction
+
+            if (slideId >= slides.length) {
+                direction = 'next'
+                SliderStore.reset()
+            }
+            else if (slideId < 0) {
+                direction = 'prev'
+                SliderStore.setSlideId(slides.length-1)
+            }
+            else {
+                this.currentSlideId < slideId ? direction = 'next' : direction= 'prev'
+                direction === 'next' ? SliderStore.next() : SliderStore.prev()
+            }
+        }
+    },
+
 	components: {
         SliderInfo,
+        SliderIllustration,
         SliderSelector,
     },
 }

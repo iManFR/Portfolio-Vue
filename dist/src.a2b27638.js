@@ -15079,6 +15079,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   components: {
     Home: _Home.default
@@ -15108,22 +15109,30 @@ exports.default = _default;
   return _c(
     "transition",
     {
-      attrs: { name: "home-leave", "leave-active-class": "animated fadeOutUp" }
+      attrs: {
+        name: "home-leave",
+        "enter-active-class": "animated fadeIn",
+        "leave-active-class": "animated fadeOutUp"
+      }
     },
     [
-      _c("div", { staticClass: "home", on: { wheel: _vm.scrollWork } }, [
-        _c("h1", [_vm._v("Manolo Pecout")]),
-        _vm._v(" "),
-        _c("h2", [_vm._v("Hi I'm Manolo, A Web developer and designer")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "scroll" }, [
-          _c("p", [_vm._v("scroll down")]),
+      _c(
+        "div",
+        { staticClass: "home animated fadeIn", on: { wheel: _vm.scrollWork } },
+        [
+          _c("h1", [_vm._v("Manolo Pecout")]),
           _vm._v(" "),
-          _c("div", { staticClass: "vl_contain" }, [
-            _c("div", { staticClass: "vl" })
+          _c("h2", [_vm._v("Hi I'm Manolo, A Web developer and designer")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "scroll" }, [
+            _c("p", [_vm._v("scroll down")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "vl_contain" }, [
+              _c("div", { staticClass: "vl" })
+            ])
           ])
-        ])
-      ])
+        ]
+      )
     ]
   )
 }
@@ -15247,10 +15256,62 @@ render._withStripped = true
       
       }
     })();
-},{"./WorkHeader.vue":"src/components/Work/WorkHeader.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/slides.json":[function(require,module,exports) {
+},{"./WorkHeader.vue":"src/components/Work/WorkHeader.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/stores/SliderStore.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var SliderStore =
+/*#__PURE__*/
+function () {
+  function SliderStore() {
+    _classCallCheck(this, SliderStore);
+
+    this.state = {
+      currentSlideId: 0
+    };
+  }
+
+  _createClass(SliderStore, [{
+    key: "prev",
+    value: function prev() {
+      this.state.currentSlideId--;
+    }
+  }, {
+    key: "next",
+    value: function next() {
+      this.state.currentSlideId++;
+    }
+  }, {
+    key: "setSlideId",
+    value: function setSlideId(slideIdToSet) {
+      this.state.currentSlideId = slideIdToSet;
+    }
+  }, {
+    key: "reset",
+    value: function reset() {
+      this.state.currentSlideId = 0;
+    }
+  }]);
+
+  return SliderStore;
+}();
+
+var _default = new SliderStore();
+
+exports.default = _default;
+},{}],"src/components/Work/Slider/slides.json":[function(require,module,exports) {
 module.exports = {
   "slides": [{
-    "id": 0,
     "title": "The Wild Bazar",
     "desc": "lorem ipsum",
     "date": "April 2019",
@@ -15258,18 +15319,37 @@ module.exports = {
     "client": "Les petites productions",
     "role": "Dev, Design",
     "url": "https://www.thewildbazar.com",
-    "illustration": "assets/img/",
+    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6487255/dribbble_twb.jpg",
     "color": "#"
   }, {
-    "id": 1,
     "title": "Mosaïculture",
     "desc": "lorem ipsum",
     "date": "June 2018",
+    "skills": "HTML/CSS/JS",
+    "client": "Janic Gourlet",
+    "role": "Dev, Design",
+    "url": "https://www.janicgourlet.fr",
+    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6502386/dribbble_shot_hd.jpg",
+    "color": "#"
+  }, {
+    "title": "Around the world",
+    "desc": "Mini Earth in 3D using three.js",
+    "date": "Febuary 2019",
+    "skills": "Three.js",
+    "client": "Janic Gourlet",
+    "role": "Dev, Design",
+    "url": "https://www.janicgourlet.fr",
+    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
+    "color": "#"
+  }, {
+    "title": "TechStory",
+    "desc": "lorem ipsum",
+    "date": "Febuary 2019",
     "skills": "Html/Css/Js",
     "client": "Janic Gourlet",
     "role": "Dev, Design",
     "url": "https://www.janicgourlet.fr",
-    "illustration": "assets/img/",
+    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
     "color": "#"
   }]
 };
@@ -15281,7 +15361,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _SliderInfo = _interopRequireDefault(require("./SliderInfo.vue"));
+var _SliderInfo = _interopRequireDefault(require("./SliderInfo"));
+
+var _SliderStore = _interopRequireDefault(require("../../../stores/SliderStore.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15309,10 +15391,18 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var slides = require('./slides.json').slides;
 
 var _default = {
+  beforeCreate: function beforeCreate() {
+    this.slides = slides;
+  },
   data: function data() {
     return {
-      date: slides.date
+      state: _SliderStore.default.state
     };
+  },
+  computed: {
+    currentSlideId: function currentSlideId() {
+      return this.state.currentSlideId;
+    }
   },
   components: {
     SliderInfo: _SliderInfo.default
@@ -15331,54 +15421,41 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "work-info" }, [
-    _c("div", { staticClass: "work-info-item work-info-date" }, [
-      _c("div", { staticClass: "work-info-title" }, [_vm._v("Date")]),
+  return _c("div", { staticClass: "slider-info" }, [
+    _c("div", { staticClass: "slider-info-item slider-info-date" }, [
+      _c("div", { staticClass: "slider-info-title" }, [_vm._v("Date")]),
       _vm._v(" "),
-      _c("div", { staticClass: "work-info-content" }, [
-        _vm._v(_vm._s(_vm.date))
+      _c("div", { staticClass: "slider-info-content" }, [
+        _vm._v(_vm._s(_vm.slides[_vm.currentSlideId].date))
       ])
     ]),
     _vm._v(" "),
-    _vm._m(0),
+    _c("div", { staticClass: "slider-info-item slider-info-skills" }, [
+      _c("div", { staticClass: "slider-info-title" }, [_vm._v("Skills")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "slider-info-content" }, [
+        _vm._v(_vm._s(_vm.slides[_vm.currentSlideId].skills))
+      ])
+    ]),
     _vm._v(" "),
-    _vm._m(1),
+    _c("div", { staticClass: "slider-info-item slider-info-client" }, [
+      _c("div", { staticClass: "slider-info-title" }, [_vm._v("Client")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "slider-info-content" }, [
+        _vm._v(_vm._s(_vm.slides[_vm.currentSlideId].title))
+      ])
+    ]),
     _vm._v(" "),
-    _vm._m(2)
+    _c("div", { staticClass: "slider-info-item slider-info-role" }, [
+      _c("div", { staticClass: "slider-info-title" }, [_vm._v("Role")]),
+      _vm._v(" "),
+      _c("div", { staticClass: "slider-info-content" }, [
+        _vm._v(_vm._s(_vm.slides[_vm.currentSlideId].role))
+      ])
+    ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "work-info-item work-info-skills" }, [
-      _c("div", { staticClass: "work-info-title" }, [_vm._v("Skills")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "work-info-content" }, [_vm._v("HTML/CSS/JS")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "work-info-item work-info-client" }, [
-      _c("div", { staticClass: "work-info-title" }, [_vm._v("Client")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "work-info-content" }, [_vm._v("Mosaiculture")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "work-info-item swork-info-role" }, [
-      _c("div", { staticClass: "work-info-title" }, [_vm._v("Role")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "work-info-content" }, [_vm._v("Dev, Design")])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
           return {
@@ -15411,7 +15488,104 @@ render._withStripped = true
       
       }
     })();
-},{"./SliderInfo.vue":"src/components/Work/Slider/SliderInfo.vue","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderSelector.vue":[function(require,module,exports) {
+},{"./SliderInfo":"src/components/Work/Slider/SliderInfo.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderIllustration.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _SliderIllustration = _interopRequireDefault(require("./SliderIllustration.vue"));
+
+var _SliderStore = _interopRequireDefault(require("../../../stores/SliderStore.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+var slides = require('./slides.json').slides;
+
+var _default = {
+  beforeCreate: function beforeCreate() {
+    this.slides = slides;
+  },
+  data: function data() {
+    return {
+      state: _SliderStore.default.state
+    };
+  },
+  computed: {
+    currentSlideId: function currentSlideId() {
+      return this.state.currentSlideId;
+    }
+  },
+  methods: {
+    next: function next() {
+      this.currentSlideId += 1;
+    }
+  },
+  components: {
+    SliderIllustration: _SliderIllustration.default
+  }
+};
+exports.default = _default;
+        var $14a8fc = exports.default || module.exports;
+      
+      if (typeof $14a8fc === 'function') {
+        $14a8fc = $14a8fc.options;
+      }
+    
+        /* template */
+        Object.assign($14a8fc, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "slider-illustration" }, [
+    _c("img", {
+      attrs: { src: _vm.slides[_vm.currentSlideId].illustration, alt: "" }
+    })
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: "data-v-14a8fc",
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$14a8fc', $14a8fc);
+          } else {
+            api.reload('$14a8fc', $14a8fc);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"./SliderIllustration.vue":"src/components/Work/Slider/SliderIllustration.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderSelector.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15420,6 +15594,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 
 var _SliderSelector = _interopRequireDefault(require("./SliderSelector.vue"));
+
+var _SliderStore = _interopRequireDefault(require("../../../stores/SliderStore.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15434,10 +15610,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var slides = require('./slides.json').slides;
 
 var _default = {
+  beforeCreate: function beforeCreate() {
+    this.slides = slides;
+  },
   data: function data() {
     return {
+      state: _SliderStore.default.state,
       sliderLength: slides.length
     };
+  },
+  computed: {
+    currentSlideId: function currentSlideId() {
+      return this.state.currentSlideId;
+    }
   },
   components: {
     SliderSelector: _SliderSelector.default
@@ -15457,13 +15642,15 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "slider-selector" }, [
-    _c("div", { staticClass: "work-current" }, [_vm._v("01")]),
+    _c("div", { staticClass: "current-slide" }, [
+      _vm._v("0" + _vm._s(_vm.currentSlideId + 1))
+    ]),
     _vm._v(" "),
     _c("a", { staticClass: "allworks-button", attrs: { href: "#" } }, [
       _vm._v("all works")
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "work-total" }, [
+    _c("div", { staticClass: "total-slide" }, [
       _vm._v("0" + _vm._s(_vm.sliderLength))
     ])
   ])
@@ -15501,7 +15688,7 @@ render._withStripped = true
       
       }
     })();
-},{"./SliderSelector.vue":"src/components/Work/Slider/SliderSelector.vue","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/Slider.vue":[function(require,module,exports) {
+},{"./SliderSelector.vue":"src/components/Work/Slider/SliderSelector.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/Slider.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15511,7 +15698,11 @@ exports.default = void 0;
 
 var _SliderInfo = _interopRequireDefault(require("./SliderInfo.vue"));
 
+var _SliderIllustration = _interopRequireDefault(require("./SliderIllustration.vue"));
+
 var _SliderSelector = _interopRequireDefault(require("./SliderSelector.vue"));
+
+var _SliderStore = _interopRequireDefault(require("../../../stores/SliderStore.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -15522,11 +15713,59 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var slides = require('./slides.json').slides;
 
 var _default = {
+  beforeCreate: function beforeCreate() {
+    this.slides = slides;
+  },
+  data: function data() {
+    return {
+      state: _SliderStore.default.state
+    };
+  },
+  computed: {
+    currentSlideId: function currentSlideId() {
+      return this.state.currentSlideId;
+    }
+  },
+  methods: {
+    nextSlide: function nextSlide() {
+      this.goToSlide(this.currentSlideId + 1);
+    },
+    prevSlide: function prevSlide() {
+      this.goToSlide(this.currentSlideId - 1);
+    },
+    goToSlide: function goToSlide(slideId) {
+      var lastSlideId = this.currentSlideId;
+      var direction;
+
+      if (slideId >= slides.length) {
+        direction = 'next';
+
+        _SliderStore.default.reset();
+      } else if (slideId < 0) {
+        direction = 'prev';
+
+        _SliderStore.default.setSlideId(slides.length - 1);
+      } else {
+        this.currentSlideId < slideId ? direction = 'next' : direction = 'prev';
+        direction === 'next' ? _SliderStore.default.next() : _SliderStore.default.prev();
+      }
+    }
+  },
   components: {
     SliderInfo: _SliderInfo.default,
+    SliderIllustration: _SliderIllustration.default,
     SliderSelector: _SliderSelector.default
   }
 };
@@ -15545,8 +15784,14 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "slider-container" },
-    [_c("SliderInfo"), _vm._v(" "), _c("SliderSelector")],
+    { staticClass: "slider-container", on: { wheel: _vm.nextSlide } },
+    [
+      _c("SliderInfo"),
+      _vm._v(" "),
+      _c("SliderIllustration"),
+      _vm._v(" "),
+      _c("SliderSelector")
+    ],
     1
   )
 }
@@ -15583,7 +15828,7 @@ render._withStripped = true
       
       }
     })();
-},{"./SliderInfo.vue":"src/components/Work/Slider/SliderInfo.vue","./SliderSelector.vue":"src/components/Work/Slider/SliderSelector.vue","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkFooter.vue":[function(require,module,exports) {
+},{"./SliderInfo.vue":"src/components/Work/Slider/SliderInfo.vue","./SliderIllustration.vue":"src/components/Work/Slider/SliderIllustration.vue","./SliderSelector.vue":"src/components/Work/Slider/SliderSelector.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkFooter.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15766,13 +16011,16 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 //import WorkMenu from './WorkMenu.vue'
+//import Maintenance from './Maintenance.vue'
 var _default = {
   components: {
     Work: _Work.default,
     WorkHeader: _WorkHeader.default,
     Slider: _Slider.default,
     //WorkMenu,
+    //Maintenance,
     WorkFooter: _WorkFooter.default
   }
 };
@@ -15881,7 +16129,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var _default = {
   data: function data() {
     return {
-      text: "Salut à tous, je vous toz !"
+      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae doloremque illum culpa officiis architecto ab, aliquid laudantium omnis numquam facere odio harum accusamus autem, dignissimos similique obcaecati minima qui commodi."
     };
   },
   components: {
@@ -16162,7 +16410,72 @@ render._withStripped = true
       
       }
     })();
-},{"./components/Home/Home.vue":"src/components/Home/Home.vue","./components/Work/Work.vue":"src/components/Work/Work.vue","./components/About/About.vue":"src/components/About/About.vue","./components/Lines.vue":"src/components/Lines.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/routes/router-config.js":[function(require,module,exports) {
+},{"./components/Home/Home.vue":"src/components/Home/Home.vue","./components/Work/Work.vue":"src/components/Work/Work.vue","./components/About/About.vue":"src/components/About/About.vue","./components/Lines.vue":"src/components/Lines.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/NotFound/NotFound.vue":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+//
+//
+//
+var _default = {
+  beforeCreate: function beforeCreate() {
+    this.$router.replace({
+      name: 'home'
+    });
+  }
+};
+exports.default = _default;
+        var $24a6af = exports.default || module.exports;
+      
+      if (typeof $24a6af === 'function') {
+        $24a6af = $24a6af.options;
+      }
+    
+        /* template */
+        Object.assign($24a6af, (function () {
+          var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div")
+}
+var staticRenderFns = []
+render._withStripped = true
+
+          return {
+            render: render,
+            staticRenderFns: staticRenderFns,
+            _compiled: true,
+            _scopeId: null,
+            functional: undefined
+          };
+        })());
+      
+    /* hot reload */
+    (function () {
+      if (module.hot) {
+        var api = require('vue-hot-reload-api');
+        api.install(require('vue'));
+        if (api.compatible) {
+          module.hot.accept();
+          if (!module.hot.data) {
+            api.createRecord('$24a6af', $24a6af);
+          } else {
+            api.reload('$24a6af', $24a6af);
+          }
+        }
+
+        
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+      }
+    })();
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/routes/router-config.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16175,6 +16488,8 @@ var _Home = _interopRequireDefault(require("../components/Home/Home.vue"));
 var _Work = _interopRequireDefault(require("../components/Work/Work.vue"));
 
 var _About = _interopRequireDefault(require("../components/About/About.vue"));
+
+var _NotFound = _interopRequireDefault(require("../components/NotFound/NotFound.vue"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -16190,9 +16505,13 @@ var routes = [{
   path: '/about',
   name: 'about',
   component: _About.default
+}, {
+  path: '*',
+  name: 'all',
+  component: _NotFound.default
 }];
 exports.routes = routes;
-},{"../components/Home/Home.vue":"src/components/Home/Home.vue","../components/Work/Work.vue":"src/components/Work/Work.vue","../components/About/About.vue":"src/components/About/About.vue"}],"src/index.js":[function(require,module,exports) {
+},{"../components/Home/Home.vue":"src/components/Home/Home.vue","../components/Work/Work.vue":"src/components/Work/Work.vue","../components/About/About.vue":"src/components/About/About.vue","../components/NotFound/NotFound.vue":"src/components/NotFound/NotFound.vue"}],"src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _vue = _interopRequireDefault(require("vue"));
@@ -16246,7 +16565,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50542" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50419" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

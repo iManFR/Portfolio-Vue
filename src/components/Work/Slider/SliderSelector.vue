@@ -1,22 +1,37 @@
 <template>
     <div class="slider-selector">
-        <div class="work-current">01</div>
+        <div class="current-slide">0{{ currentSlideId + 1 }}</div>
         <a href="#" class="allworks-button">all works</a>
-        <div class="work-total">0{{ sliderLength }}</div>
+        <div class="total-slide">0{{ sliderLength }}</div>
     </div>
 </template>
 
 <script>
 import SliderSelector from './SliderSelector.vue'
 
+import SliderStore from '../../../stores/SliderStore.js'
+
 const slides = require('./slides.json').slides
 
 export default {
+
+    beforeCreate(){
+        this.slides = slides
+    },
+
     data(){
         return {
-            sliderLength: slides.length,
+            state: SliderStore.state,
+			sliderLength: slides.length,
         }
     },
+
+    computed: {
+        currentSlideId() {
+            return this.state.currentSlideId
+        }
+    },
+
 	components: {
         SliderSelector,
     },
@@ -36,7 +51,7 @@ export default {
     flex-direction: column;
     font-family: $font-text;
     font-weight: 300;
-    .work-current{
+    .current-slide{
         font-size: 20px;
     }
     .allworks-button{
@@ -64,7 +79,7 @@ export default {
         margin-left: 20px;
         border-top: 1px solid black;
     }
-    .work-total{
+    .total-slide{
         font-size: 20px;
     }
 }

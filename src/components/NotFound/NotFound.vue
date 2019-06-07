@@ -4,6 +4,10 @@
 <script>
 export default {
 
+	beforeCreate(){
+		this.$router.replace({ name: 'home' })
+	}
+
 }
 </script>
 

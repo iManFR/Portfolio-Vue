@@ -1,9 +1,10 @@
 <template>
     <transition
             name="home-leave"
+            enter-active-class="animated fadeIn"
             leave-active-class="animated fadeOutUp"
         >
-        <div class="home" v-on:wheel="scrollWork">
+        <div class="home animated fadeIn" v-on:wheel="scrollWork">
             <h1>Manolo Pecout</h1>
             <h2>Hi I'm Manolo, A Web developer and designer</h2>
             <div class="scroll">

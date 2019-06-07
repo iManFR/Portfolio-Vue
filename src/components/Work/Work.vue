@@ -8,6 +8,7 @@
             <WorkHeader></WorkHeader>
             <Slider></Slider>
             <!-- <WorkMenu></WorkMenu> -->
+            <!-- <Maintenance></Maintenance> -->
             <WorkFooter></WorkFooter>
         </div>
     </transition>
@@ -18,6 +19,7 @@ import Work from './Work.vue'
 import WorkHeader from './WorkHeader.vue'
 import Slider from './Slider/Slider.vue'
 //import WorkMenu from './WorkMenu.vue'
+//import Maintenance from './Maintenance.vue'
 import WorkFooter from './WorkFooter.vue'
 
 export default {
@@ -26,6 +28,7 @@ export default {
         WorkHeader,
         Slider,
         //WorkMenu,
+        //Maintenance,
         WorkFooter,
     },
 }
@@ -40,4 +43,5 @@ export default {
     width: 100vw;
     transition: all 1s ease-in-out;
 }
+
 </style>

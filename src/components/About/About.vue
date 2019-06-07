@@ -22,7 +22,7 @@ import WorkFooter from '../Work/WorkFooter.vue'
 export default {
     data() {
         return {
-            text: "Salut à tous, je vous toz !",
+            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae doloremque illum culpa officiis architecto ab, aliquid laudantium omnis numquam facere odio harum accusamus autem, dignissimos similique obcaecati minima qui commodi.",
         }
     },
 	components: {

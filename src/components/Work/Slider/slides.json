@@ -1,7 +1,6 @@
 {
 	"slides": [
 		{
-            "id": 0,
             "title": "The Wild Bazar",
             "desc": "lorem ipsum",
             "date": "April 2019",
@@ -9,19 +8,40 @@
             "client": "Les petites productions",
             "role": "Dev, Design",
             "url": "https://www.thewildbazar.com",
-            "illustration": "assets/img/",
+            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6487255/dribbble_twb.jpg",
             "color": "#"
         },
         {
-            "id": 1,
             "title": "Mosaïculture",
             "desc": "lorem ipsum",
             "date": "June 2018",
+            "skills": "HTML/CSS/JS",
+            "client": "Janic Gourlet",
+            "role": "Dev, Design",
+            "url": "https://www.janicgourlet.fr",
+            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6502386/dribbble_shot_hd.jpg",
+            "color": "#"
+        },
+        {
+            "title": "Around the world",
+            "desc": "Mini Earth in 3D using three.js",
+            "date": "Febuary 2019",
+            "skills": "Three.js",
+            "client": "Janic Gourlet",
+            "role": "Dev, Design",
+            "url": "https://www.janicgourlet.fr",
+            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
+            "color": "#"
+        },
+        {
+            "title": "TechStory",
+            "desc": "lorem ipsum",
+            "date": "Febuary 2019",
             "skills": "Html/Css/Js",
             "client": "Janic Gourlet",
             "role": "Dev, Design",
             "url": "https://www.janicgourlet.fr",
-            "illustration": "assets/img/",
+            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
             "color": "#"
         }
 	]
