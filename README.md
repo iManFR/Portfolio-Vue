@@ -26,7 +26,11 @@ npm run build
 ```
 
 ## Features
-- 
+- Landing page
+- Slider of works
+- Data binding
+- About page
+- Canvas cursor
 
 ## Controls
 - Mouse pointer
