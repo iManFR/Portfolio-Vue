@@ -2,10 +2,10 @@
 	"slides": [
 		{
             "title": "The Wild Bazar",
-            "desc": "lorem ipsum",
+            "desc": "Complete creation of an e-business website under Prestashop for a decoration shop in Biarritz",
             "date": "April 2019",
             "skills": "Prestashop",
-            "client": "Les petites productions",
+            "client": "The Wild Bazar",
             "role": "Dev, Design",
             "url": "https://www.thewildbazar.com",
             "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6487255/dribbble_twb.jpg",
@@ -13,9 +13,9 @@
         },
         {
             "title": "Mosaïculture",
-            "desc": "lorem ipsum",
+            "desc": "Creation of a showcase site for a consultant to present his activity",
             "date": "June 2018",
-            "skills": "HTML/CSS/JS",
+            "skills": "Html/Css/Js",
             "client": "Janic Gourlet",
             "role": "Dev, Design",
             "url": "https://www.janicgourlet.fr",
@@ -27,21 +27,32 @@
             "desc": "Mini Earth in 3D using three.js",
             "date": "Febuary 2019",
             "skills": "Three.js",
-            "client": "Janic Gourlet",
+            "client": "School",
             "role": "Dev, Design",
-            "url": "https://www.janicgourlet.fr",
-            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
+            "url": "",
+            "illustration": "/assets/img/atw.png",
+            "color": "#"
+        },
+        {
+            "title": "Futuristic Interface",
+            "desc": "Creation of a futuristic fictive and static interface using transitions and css animations",
+            "date": "Febuary 2019",
+            "skills": "Html/Css/Js",
+            "client": "School",
+            "role": "Dev, Design",
+            "url": "https://www.manolopecout.fr/works/futuristic/",
+            "illustration": "/assets/img/futur.png",
             "color": "#"
         },
         {
             "title": "TechStory",
-            "desc": "lorem ipsum",
+            "desc": "Creation of a site retracing the history of technologies at the service of the human being",
             "date": "Febuary 2019",
             "skills": "Html/Css/Js",
-            "client": "Janic Gourlet",
+            "client": "School",
             "role": "Dev, Design",
-            "url": "https://www.janicgourlet.fr",
-            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
+            "url": "",
+            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6505897/lebonbon.jpg",
             "color": "#"
         }
 	]

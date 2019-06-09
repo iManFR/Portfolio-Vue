@@ -1,14 +1,12 @@
 <template>
     <div class="slider-selector">
         <div class="current-slide">0{{ currentSlideId + 1 }}</div>
-        <a href="#" class="allworks-button">all works</a>
+        <a href="#" class="allworks-button" data-hover>all works</a>
         <div class="total-slide">0{{ sliderLength }}</div>
     </div>
 </template>
 
 <script>
-import SliderSelector from './SliderSelector.vue'
-
 import SliderStore from '../../../stores/SliderStore.js'
 
 const slides = require('./slides.json').slides
@@ -32,9 +30,6 @@ export default {
         }
     },
 
-	components: {
-        SliderSelector,
-    },
 }
 </script>
 
@@ -43,7 +38,7 @@ export default {
 
 .slider-selector{
     position: absolute;
-    right: -25px;
+    right: -40px;
     height: 40%;
     display: flex;
     justify-content: space-between;

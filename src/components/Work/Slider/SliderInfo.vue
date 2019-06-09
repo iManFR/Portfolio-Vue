@@ -20,8 +20,6 @@
 </template>
 
 <script>
-import SliderInfo from './SliderInfo'
-
 import SliderStore from '../../../stores/SliderStore.js'
 
 const slides = require('./slides.json').slides
@@ -42,10 +40,6 @@ export default {
         currentSlideId() {
             return this.state.currentSlideId
         }
-    },
-
-	components: {
-        SliderInfo,
     },
 
 }

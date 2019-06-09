@@ -1,12 +1,12 @@
 <template>
-    <div class="slider-illustration">
-        <img :src="slides[currentSlideId].illustration" alt="">
+    <div class="slider-illustration animated fadeIn">
+        <a :href="slides[currentSlideId].url" target="_blank">
+            <img :src="slides[currentSlideId].illustration" alt="" data-hover>
+        </a>
     </div>
 </template>
 
 <script>
-import SliderIllustration from './SliderIllustration.vue'
-
 import SliderStore from '../../../stores/SliderStore.js'
 
 const slides = require('./slides.json').slides
@@ -30,14 +30,9 @@ export default {
     },
 
     methods: {
-        next() {
-            this.currentSlideId += 1
-        }
+        
     },
 
-    components: {
-        SliderIllustration
-    },
 }
 </script>
 

@@ -1,11 +1,10 @@
 <template>
-    <div class="construction animated fadeIn">Site en construction</div>
+    <div class="construction animated fadeIn">Page Case Study</div>
 </template>
 
 <script>
 
 export default {
-
 	components: {
 		
     },
@@ -14,7 +13,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/variables.scss';
+@import '../../../styles/variables.scss';
 
 .construction{
     position: absolute;

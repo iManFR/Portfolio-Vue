@@ -1,14 +1,15 @@
 <template>
     <div class="about-view">
-        <div class="backworks-button">
-            <router-link tag="a" to="/work">Back to works</router-link>
+        <div class="backworks-button animated fadeInRight">
+            <router-link tag="a" to="/work" data-hover>Back to works</router-link>
         </div>
         <div class="about-build">
             <div class="about-picture">
 
             </div>
-            <div class="about-text">
-                <p>{{text}}</p>
+            <div class="about-text animated fadeInRight">
+                <p>{{text[0]}}</p>
+                <p>{{text[1]}}</p>
             </div>
         </div>
         <WorkFooter></WorkFooter>
@@ -16,17 +17,18 @@
 </template>
 
 <script>
-import About from './About.vue'
 import WorkFooter from '../Work/WorkFooter.vue'
 
 export default {
     data() {
         return {
-            text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae doloremque illum culpa officiis architecto ab, aliquid laudantium omnis numquam facere odio harum accusamus autem, dignissimos similique obcaecati minima qui commodi.",
+            text: [
+                "Hey !",
+                " I’m Manolo Pecout, a french web student at HETIC and freelance web developper and web designer on my free time. Feel free to contact me to talk about your project"
+            ],
         }
     },
 	components: {
-        About,
         WorkFooter,
     },
 }
@@ -88,11 +90,14 @@ export default {
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             p{
                 width: 70%;
                 font-family: $font-text;
                 font-weight: 300;
                 font-size: 18px;
+                margin: 10px 0px;
+                line-height: 23px;
             }
         }
     }

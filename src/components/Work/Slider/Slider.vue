@@ -1,5 +1,5 @@
 <template>
-    <div v-on:wheel="nextSlide" class="slider-container">
+    <div class="slider-container">
         <SliderInfo></SliderInfo>
         <!-- <SliderIllustration 
             v-for="_slide in slides"
@@ -27,6 +27,11 @@ export default {
 
     beforeCreate(){
         this.slides = slides
+    },
+
+    //Reset slider when quit it
+    beforeDestroy(){
+        SliderStore.reset()
     },
 
     data(){
@@ -63,10 +68,27 @@ export default {
                 SliderStore.setSlideId(slides.length-1)
             }
             else {
-                this.currentSlideId < slideId ? direction = 'next' : direction= 'prev'
+                this.currentSlideId < slideId ? direction = 'next' : direction = 'prev'
                 direction === 'next' ? SliderStore.next() : SliderStore.prev()
             }
-        }
+        },
+    },
+
+    created () {
+        // document.addEventListener('wheel', (e) => {
+        //     if (e.deltaX > 200){
+        //         this.nextSlide()
+        //     } else if (e.deltaX < 200){
+        //         this.prevSlide()
+        //     }
+        // }),
+        document.addEventListener('keyup', (e) => {
+            if (e.which === 39 | e.which === 40){
+                this.nextSlide()
+            } else if (e.which === 37 | e.which === 38) {
+                this.prevSlide()
+            }
+        })
     },
 
 	components: {

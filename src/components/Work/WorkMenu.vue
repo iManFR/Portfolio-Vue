@@ -22,13 +22,11 @@
 </template>
 
 <script>
-import WorkMenu from './WorkMenu.vue'
 
 export default {
-	components: {
-		WorkMenu,
-    },
+
 }
+
 </script>
 
 <style lang="scss" scoped>

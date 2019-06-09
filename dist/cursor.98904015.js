@@ -117,79 +117,75 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"src/scripts/cursor.js":[function(require,module,exports) {
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance"); }
 
-  return bundleURL;
-}
+function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter); }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+var canvas = document.querySelector('.js-canvas');
+var ctx = canvas.getContext('2d');
+var width = canvas.width = window.innerWidth;
+var height = canvas.height = window.innerHeight;
+var mouseX = width / 2;
+var mouseY = height / 2;
+var circle = {
+  radius: 20,
+  lastX: mouseX,
+  lastY: mouseY
+};
 
-  return '/';
-}
+var elems = _toConsumableArray(document.querySelectorAll('[data-hover]'));
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
+var onResize = function onResize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+};
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
+var render = function render() {
+  circle.lastX = lerp(circle.lastX, mouseX, 0.25);
+  circle.lastY = lerp(circle.lastY, mouseY, 0.25);
+  ctx.clearRect(0, 0, width, height);
+  ctx.beginPath();
+  ctx.arc(circle.lastX, circle.lastY, circle.radius, 0, Math.PI * 2, false);
+  ctx.fillStyle = "#000";
+  ctx.lineWidth = 0.5;
+  ctx.stroke();
+  ctx.closePath();
+  requestAnimationFrame(render);
+};
 
-function updateLink(link) {
-  var newLink = link.cloneNode();
+var init = function init() {
+  requestAnimationFrame(render);
+  window.addEventListener('mousemove', function (e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+  });
+  window.addEventListener('resize', onResize, false);
+  var tween = TweenMax.to(circle, 0.25, {
+    radius: circle.radius * 1.5,
+    ease: Power1.easeInOut,
+    paused: true
+  });
+  elems.forEach(function (el) {
+    el.addEventListener('mouseenter', function () {
+      tween.play();
+    }, false);
+    el.addEventListener('mouseleave', function () {
+      tween.reverse();
+    }, false);
+  });
+};
 
-  newLink.onload = function () {
-    link.remove();
-  };
+var lerp = function lerp(a, b, n) {
+  return (1 - n) * a + n * b;
+};
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"src/styles/reset.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+init();
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -392,5 +388,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/reset.6f2d44fe.js.map
+},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/scripts/cursor.js"], null)
+//# sourceMappingURL=/cursor.98904015.js.map

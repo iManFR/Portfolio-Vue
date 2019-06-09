@@ -1,13 +1,10 @@
 <template>
 	<div id="app">
-        <transition
-            name="show-view"
-            enter-active-class="animated fadeIn"
-            leave-active-class="animated fadeOut"
-            >
-		    <router-view></router-view>
-        </transition>
+        <!-- <transition name="view-fade" enter-active-class="animated fadeIn" leave-active-class="animated fadeOut"> -->
+            <router-view></router-view>
+        <!-- </transition> -->
         <Lines></Lines>
+        <canvas class="js-canvas"></canvas>
 	</div>
 </template>
 
@@ -16,6 +13,8 @@ import Home from './components/Home/Home.vue'
 import Work from './components/Work/Work.vue'
 import About from './components/About/About.vue'
 import Lines from './components/Lines.vue'
+
+//import Cursor from './scripts/cursor.js'
 
 export default {
 	components: {
@@ -39,8 +38,23 @@ body,html{
     overflow-y: hidden;
 }
 
+*{
+    cursor: none;
+}
+
 *::selection{
     background-color: black;
     color: white;
+}
+
+canvas{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  z-index: 3;
+  pointer-events: none;
+  //mix-blend-mode: difference;
 }
 </style>

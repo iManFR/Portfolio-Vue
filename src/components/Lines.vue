@@ -9,14 +9,11 @@
 </template>
 
 <script>
-import Lines from './Lines.vue'
 
 export default {
-	components: {
-		Lines
-	},
     
 }
+
 </script>
 
 <style lang="scss" scoped>

@@ -15110,7 +15110,7 @@ exports.default = _default;
     "transition",
     {
       attrs: {
-        name: "home-leave",
+        name: "home-anim",
         "enter-active-class": "animated fadeIn",
         "leave-active-class": "animated fadeOutUp"
       }
@@ -15118,7 +15118,10 @@ exports.default = _default;
     [
       _c(
         "div",
-        { staticClass: "home animated fadeIn", on: { wheel: _vm.scrollWork } },
+        {
+          staticClass: "home animated fadeIn slow",
+          on: { wheel: _vm.scrollWork }
+        },
         [
           _c("h1", [_vm._v("Manolo Pecout")]),
           _vm._v(" "),
@@ -15169,18 +15172,13 @@ render._withStripped = true
       
       }
     })();
-},{"./Home.vue":"src/components/Home/Home.vue","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkHeader.vue":[function(require,module,exports) {
+},{"./Home.vue":"src/components/Home/Home.vue","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkHeader.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _WorkHeader = _interopRequireDefault(require("./WorkHeader.vue"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 //
 //
 //
@@ -15191,9 +15189,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 var _default = {
-  components: {
-    WorkHeader: _WorkHeader.default
-  }
+  components: {}
 };
 exports.default = _default;
         var $1c2def = exports.default || module.exports;
@@ -15215,9 +15211,11 @@ exports.default = _default;
       "div",
       { staticClass: "about-link animated fadeInRight" },
       [
-        _c("router-link", { attrs: { tag: "a", to: "/about" } }, [
-          _vm._v("about me")
-        ])
+        _c(
+          "router-link",
+          { attrs: { tag: "a", to: "/about", "data-hover": "" } },
+          [_vm._v("about me")]
+        )
       ],
       1
     )
@@ -15256,7 +15254,7 @@ render._withStripped = true
       
       }
     })();
-},{"./WorkHeader.vue":"src/components/Work/WorkHeader.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/stores/SliderStore.js":[function(require,module,exports) {
+},{"/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/stores/SliderStore.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15313,19 +15311,19 @@ exports.default = _default;
 module.exports = {
   "slides": [{
     "title": "The Wild Bazar",
-    "desc": "lorem ipsum",
+    "desc": "Complete creation of an e-business website under Prestashop for a decoration shop in Biarritz",
     "date": "April 2019",
     "skills": "Prestashop",
-    "client": "Les petites productions",
+    "client": "The Wild Bazar",
     "role": "Dev, Design",
     "url": "https://www.thewildbazar.com",
     "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6487255/dribbble_twb.jpg",
     "color": "#"
   }, {
     "title": "Mosaïculture",
-    "desc": "lorem ipsum",
+    "desc": "Creation of a showcase site for a consultant to present his activity",
     "date": "June 2018",
-    "skills": "HTML/CSS/JS",
+    "skills": "Html/Css/Js",
     "client": "Janic Gourlet",
     "role": "Dev, Design",
     "url": "https://www.janicgourlet.fr",
@@ -15336,20 +15334,30 @@ module.exports = {
     "desc": "Mini Earth in 3D using three.js",
     "date": "Febuary 2019",
     "skills": "Three.js",
-    "client": "Janic Gourlet",
+    "client": "School",
     "role": "Dev, Design",
-    "url": "https://www.janicgourlet.fr",
-    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
+    "url": "",
+    "illustration": "/assets/img/atw.png",
+    "color": "#"
+  }, {
+    "title": "Futuristic Interface",
+    "desc": "Creation of a futuristic fictive and static interface using transitions and css animations",
+    "date": "Febuary 2019",
+    "skills": "Html/Css/Js",
+    "client": "School",
+    "role": "Dev, Design",
+    "url": "https://www.manolopecout.fr/works/futuristic/",
+    "illustration": "/assets/img/futur.png",
     "color": "#"
   }, {
     "title": "TechStory",
-    "desc": "lorem ipsum",
+    "desc": "Creation of a site retracing the history of technologies at the service of the human being",
     "date": "Febuary 2019",
     "skills": "Html/Css/Js",
-    "client": "Janic Gourlet",
+    "client": "School",
     "role": "Dev, Design",
-    "url": "https://www.janicgourlet.fr",
-    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6486782/dribbble_shot_hd.jpg",
+    "url": "",
+    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6505897/lebonbon.jpg",
     "color": "#"
   }]
 };
@@ -15360,8 +15368,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _SliderInfo = _interopRequireDefault(require("./SliderInfo"));
 
 var _SliderStore = _interopRequireDefault(require("../../../stores/SliderStore.js"));
 
@@ -15403,9 +15409,6 @@ var _default = {
     currentSlideId: function currentSlideId() {
       return this.state.currentSlideId;
     }
-  },
-  components: {
-    SliderInfo: _SliderInfo.default
   }
 };
 exports.default = _default;
@@ -15488,7 +15491,7 @@ render._withStripped = true
       
       }
     })();
-},{"./SliderInfo":"src/components/Work/Slider/SliderInfo.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderIllustration.vue":[function(require,module,exports) {
+},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderIllustration.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15496,12 +15499,12 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _SliderIllustration = _interopRequireDefault(require("./SliderIllustration.vue"));
-
 var _SliderStore = _interopRequireDefault(require("../../../stores/SliderStore.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
 //
 //
 //
@@ -15524,14 +15527,7 @@ var _default = {
       return this.state.currentSlideId;
     }
   },
-  methods: {
-    next: function next() {
-      this.currentSlideId += 1;
-    }
-  },
-  components: {
-    SliderIllustration: _SliderIllustration.default
-  }
+  methods: {}
 };
 exports.default = _default;
         var $14a8fc = exports.default || module.exports;
@@ -15546,10 +15542,20 @@ exports.default = _default;
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "slider-illustration" }, [
-    _c("img", {
-      attrs: { src: _vm.slides[_vm.currentSlideId].illustration, alt: "" }
-    })
+  return _c("div", { staticClass: "slider-illustration animated fadeIn" }, [
+    _c(
+      "a",
+      { attrs: { href: _vm.slides[_vm.currentSlideId].url, target: "_blank" } },
+      [
+        _c("img", {
+          attrs: {
+            src: _vm.slides[_vm.currentSlideId].illustration,
+            alt: "",
+            "data-hover": ""
+          }
+        })
+      ]
+    )
   ])
 }
 var staticRenderFns = []
@@ -15585,15 +15591,13 @@ render._withStripped = true
       
       }
     })();
-},{"./SliderIllustration.vue":"src/components/Work/Slider/SliderIllustration.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderSelector.vue":[function(require,module,exports) {
+},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderSelector.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _SliderSelector = _interopRequireDefault(require("./SliderSelector.vue"));
 
 var _SliderStore = _interopRequireDefault(require("../../../stores/SliderStore.js"));
 
@@ -15623,9 +15627,6 @@ var _default = {
     currentSlideId: function currentSlideId() {
       return this.state.currentSlideId;
     }
-  },
-  components: {
-    SliderSelector: _SliderSelector.default
   }
 };
 exports.default = _default;
@@ -15646,9 +15647,14 @@ exports.default = _default;
       _vm._v("0" + _vm._s(_vm.currentSlideId + 1))
     ]),
     _vm._v(" "),
-    _c("a", { staticClass: "allworks-button", attrs: { href: "#" } }, [
-      _vm._v("all works")
-    ]),
+    _c(
+      "a",
+      {
+        staticClass: "allworks-button",
+        attrs: { href: "#", "data-hover": "" }
+      },
+      [_vm._v("all works")]
+    ),
     _vm._v(" "),
     _c("div", { staticClass: "total-slide" }, [
       _vm._v("0" + _vm._s(_vm.sliderLength))
@@ -15688,7 +15694,7 @@ render._withStripped = true
       
       }
     })();
-},{"./SliderSelector.vue":"src/components/Work/Slider/SliderSelector.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/Slider.vue":[function(require,module,exports) {
+},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/Slider.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15728,6 +15734,10 @@ var _default = {
   beforeCreate: function beforeCreate() {
     this.slides = slides;
   },
+  //Reset slider when quit it
+  beforeDestroy: function beforeDestroy() {
+    _SliderStore.default.reset();
+  },
   data: function data() {
     return {
       state: _SliderStore.default.state
@@ -15763,6 +15773,24 @@ var _default = {
       }
     }
   },
+  created: function created() {
+    var _this = this;
+
+    // document.addEventListener('wheel', (e) => {
+    //     if (e.deltaX > 200){
+    //         this.nextSlide()
+    //     } else if (e.deltaX < 200){
+    //         this.prevSlide()
+    //     }
+    // }),
+    document.addEventListener('keyup', function (e) {
+      if (e.which === 39 | e.which === 40) {
+        _this.nextSlide();
+      } else if (e.which === 37 | e.which === 38) {
+        _this.prevSlide();
+      }
+    });
+  },
   components: {
     SliderInfo: _SliderInfo.default,
     SliderIllustration: _SliderIllustration.default,
@@ -15784,7 +15812,7 @@ exports.default = _default;
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "slider-container", on: { wheel: _vm.nextSlide } },
+    { staticClass: "slider-container" },
     [
       _c("SliderInfo"),
       _vm._v(" "),
@@ -15883,7 +15911,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "footer" }, [
       _c("nav", [
         _c("ul", [
-          _c("li", [
+          _c("li", { attrs: { "data-hover": "" } }, [
             _c(
               "a",
               {
@@ -15896,26 +15924,13 @@ var staticRenderFns = [
             )
           ]),
           _vm._v(" "),
-          _c("li", [
-            _c(
-              "a",
-              {
-                attrs: {
-                  target: "_blank",
-                  href: "https://www.facebook.com/man.olo.378"
-                }
-              },
-              [_vm._v("Facebook")]
-            )
-          ]),
-          _vm._v(" "),
-          _c("li", [
+          _c("li", { attrs: { "data-hover": "" } }, [
             _c("a", { attrs: { target: "_blank", href: "#" } }, [
               _vm._v("Twitter")
             ])
           ]),
           _vm._v(" "),
-          _c("li", [
+          _c("li", { attrs: { "data-hover": "" } }, [
             _c(
               "a",
               {
@@ -15925,24 +15940,37 @@ var staticRenderFns = [
             )
           ]),
           _vm._v(" "),
-          _c("li", [
+          _c("li", { attrs: { "data-hover": "" } }, [
             _c(
               "a",
               {
                 attrs: {
                   target: "_blank",
-                  href: "https://www.behance.net/manolopecoee2b"
+                  href:
+                    "https://www.malt.fr/profile/manolopecout#edit-availability"
                 }
               },
-              [_vm._v("Behance")]
+              [_vm._v("Malt")]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { attrs: { "data-hover": "" } }, [
+            _c(
+              "a",
+              {
+                attrs: { target: "_blank", href: "https://github.com/iManFR" }
+              },
+              [_vm._v("Github")]
             )
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("a", { attrs: { href: "mailto:manolo.p@hotmail.fr" } }, [
-        _vm._v("Contact")
-      ])
+      _c(
+        "a",
+        { attrs: { href: "mailto:manolo.p@hotmail.fr", "data-hover": "" } },
+        [_vm._v("Contact")]
+      )
     ])
   }
 ]
@@ -15978,15 +16006,13 @@ render._withStripped = true
       
       }
     })();
-},{"./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Work.vue":[function(require,module,exports) {
+},{"./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Work.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _Work = _interopRequireDefault(require("./Work.vue"));
 
 var _WorkHeader = _interopRequireDefault(require("./WorkHeader.vue"));
 
@@ -16015,8 +16041,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //import WorkMenu from './WorkMenu.vue'
 //import Maintenance from './Maintenance.vue'
 var _default = {
+  data: function data() {
+    return {};
+  },
   components: {
-    Work: _Work.default,
     WorkHeader: _WorkHeader.default,
     Slider: _Slider.default,
     //WorkMenu,
@@ -16041,8 +16069,8 @@ exports.default = _default;
     "transition",
     {
       attrs: {
-        name: "show-view",
-        "enter-active-class": "animated fadeIn",
+        name: "work-anim",
+        "enter-active-class": "animated fadeInUp",
         "leave-active-class": "animated fadeOut"
       }
     },
@@ -16095,15 +16123,13 @@ render._withStripped = true
       
       }
     })();
-},{"./Work.vue":"src/components/Work/Work.vue","./WorkHeader.vue":"src/components/Work/WorkHeader.vue","./Slider/Slider.vue":"src/components/Work/Slider/Slider.vue","./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/About/About.vue":[function(require,module,exports) {
+},{"./WorkHeader.vue":"src/components/Work/WorkHeader.vue","./Slider/Slider.vue":"src/components/Work/Slider/Slider.vue","./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/About/About.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _About = _interopRequireDefault(require("./About.vue"));
 
 var _WorkFooter = _interopRequireDefault(require("../Work/WorkFooter.vue"));
 
@@ -16126,14 +16152,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
 var _default = {
   data: function data() {
     return {
-      text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quae doloremque illum culpa officiis architecto ab, aliquid laudantium omnis numquam facere odio harum accusamus autem, dignissimos similique obcaecati minima qui commodi."
+      text: ["Hey !", " I’m Manolo Pecout, a french web student at HETIC and freelance web developper and web designer on my free time. Feel free to contact me to talk about your project"]
     };
   },
   components: {
-    About: _About.default,
     WorkFooter: _WorkFooter.default
   }
 };
@@ -16156,11 +16182,13 @@ exports.default = _default;
     [
       _c(
         "div",
-        { staticClass: "backworks-button" },
+        { staticClass: "backworks-button animated fadeInRight" },
         [
-          _c("router-link", { attrs: { tag: "a", to: "/work" } }, [
-            _vm._v("Back to works")
-          ])
+          _c(
+            "router-link",
+            { attrs: { tag: "a", to: "/work", "data-hover": "" } },
+            [_vm._v("Back to works")]
+          )
         ],
         1
       ),
@@ -16168,8 +16196,10 @@ exports.default = _default;
       _c("div", { staticClass: "about-build" }, [
         _c("div", { staticClass: "about-picture" }),
         _vm._v(" "),
-        _c("div", { staticClass: "about-text" }, [
-          _c("p", [_vm._v(_vm._s(_vm.text))])
+        _c("div", { staticClass: "about-text animated fadeInRight" }, [
+          _c("p", [_vm._v(_vm._s(_vm.text[0]))]),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(_vm.text[1]))])
         ])
       ]),
       _vm._v(" "),
@@ -16211,18 +16241,13 @@ render._withStripped = true
       
       }
     })();
-},{"./About.vue":"src/components/About/About.vue","../Work/WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Lines.vue":[function(require,module,exports) {
+},{"../Work/WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Lines.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-
-var _Lines = _interopRequireDefault(require("./Lines.vue"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
 //
 //
 //
@@ -16233,11 +16258,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-var _default = {
-  components: {
-    Lines: _Lines.default
-  }
-};
+var _default = {};
 exports.default = _default;
         var $08681d = exports.default || module.exports;
       
@@ -16303,7 +16324,7 @@ render._withStripped = true
       
       }
     })();
-},{"./Lines.vue":"src/components/Lines.vue","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/App.vue":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16331,9 +16352,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
+//import Cursor from './scripts/cursor.js'
 var _default = {
   components: {
     Home: _Home.default,
@@ -16359,20 +16378,11 @@ exports.default = _default;
     "div",
     { attrs: { id: "app" } },
     [
-      _c(
-        "transition",
-        {
-          attrs: {
-            name: "show-view",
-            "enter-active-class": "animated fadeIn",
-            "leave-active-class": "animated fadeOut"
-          }
-        },
-        [_c("router-view")],
-        1
-      ),
+      _c("router-view"),
       _vm._v(" "),
-      _c("Lines")
+      _c("Lines"),
+      _vm._v(" "),
+      _c("canvas", { staticClass: "js-canvas" })
     ],
     1
   )
@@ -16410,7 +16420,7 @@ render._withStripped = true
       
       }
     })();
-},{"./components/Home/Home.vue":"src/components/Home/Home.vue","./components/Work/Work.vue":"src/components/Work/Work.vue","./components/About/About.vue":"src/components/About/About.vue","./components/Lines.vue":"src/components/Lines.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/NotFound/NotFound.vue":[function(require,module,exports) {
+},{"./components/Home/Home.vue":"src/components/Home/Home.vue","./components/Work/Work.vue":"src/components/Work/Work.vue","./components/About/About.vue":"src/components/About/About.vue","./components/Lines.vue":"src/components/Lines.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/NotFound/NotFound.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16565,7 +16575,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50419" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57474" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

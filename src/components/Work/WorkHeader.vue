@@ -2,19 +2,19 @@
     <div class="header">
         <h1>Manolo Pecout</h1>
         <div class="about-link animated fadeInRight">
-            <router-link tag="a" to="/about">about me</router-link>
+            <router-link tag="a" to="/about" data-hover>about me</router-link>
         </div>
     </div>
 </template>
 
 <script>
-import WorkHeader from './WorkHeader.vue'
 
 export default {
 	components: {
-		WorkHeader
+		
     },
 }
+
 </script>
 
 <style lang="scss" scoped>

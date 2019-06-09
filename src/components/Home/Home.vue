@@ -1,10 +1,10 @@
 <template>
     <transition
-            name="home-leave"
-            enter-active-class="animated fadeIn"
-            leave-active-class="animated fadeOutUp"
-        >
-        <div class="home animated fadeIn" v-on:wheel="scrollWork">
+        name="home-anim"
+        enter-active-class="animated fadeIn"
+        leave-active-class="animated fadeOutUp"
+    >
+        <div class="home animated fadeIn slow" v-on:wheel="scrollWork">
             <h1>Manolo Pecout</h1>
             <h2>Hi I'm Manolo, A Web developer and designer</h2>
             <div class="scroll">
@@ -99,10 +99,5 @@ export default {
             }
         }
     }
-}
-
-.home-view.hide{
-    transform: translateY(-100%);
-    opacity: 0;
 }
 </style>
