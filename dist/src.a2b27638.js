@@ -14707,7 +14707,7 @@ if (inBrowser && window.Vue) {
 
 var _default = VueRouter;
 exports.default = _default;
-},{}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{}],"node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -14739,7 +14739,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -14774,7 +14774,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
+},{"./bundle-url":"node_modules/parcel/src/builtins/bundle-url.js"}],"node_modules/vue-hot-reload-api/dist/index.js":[function(require,module,exports) {
 var Vue // late bind
 var version
 var map = Object.create(null)
@@ -15172,7 +15172,7 @@ render._withStripped = true
       
       }
     })();
-},{"./Home.vue":"src/components/Home/Home.vue","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkHeader.vue":[function(require,module,exports) {
+},{"./Home.vue":"src/components/Home/Home.vue","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkHeader.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15254,7 +15254,7 @@ render._withStripped = true
       
       }
     })();
-},{"/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/stores/SliderStore.js":[function(require,module,exports) {
+},{"/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/stores/SliderStore.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15317,7 +15317,7 @@ module.exports = {
     "client": "The Wild Bazar",
     "role": "Dev, Design",
     "url": "https://www.thewildbazar.com",
-    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6487255/dribbble_twb.jpg",
+    "illustration": "https://www.manolopecout.fr/imgs/twb.png",
     "color": "#"
   }, {
     "title": "Mosaïculture",
@@ -15327,7 +15327,7 @@ module.exports = {
     "client": "Janic Gourlet",
     "role": "Dev, Design",
     "url": "https://www.janicgourlet.fr",
-    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6502386/dribbble_shot_hd.jpg",
+    "illustration": "https://www.manolopecout.fr/imgs/mosa.png",
     "color": "#"
   }, {
     "title": "Around the world",
@@ -15337,7 +15337,7 @@ module.exports = {
     "client": "School",
     "role": "Dev, Design",
     "url": "",
-    "illustration": "/assets/img/atw.png",
+    "illustration": "https://www.manolopecout.fr/imgs/atw.png",
     "color": "#"
   }, {
     "title": "Futuristic Interface",
@@ -15347,7 +15347,7 @@ module.exports = {
     "client": "School",
     "role": "Dev, Design",
     "url": "https://www.manolopecout.fr/works/futuristic/",
-    "illustration": "/assets/img/futur.png",
+    "illustration": "https://www.manolopecout.fr/imgs/futur.png",
     "color": "#"
   }, {
     "title": "TechStory",
@@ -15356,8 +15356,8 @@ module.exports = {
     "skills": "Html/Css/Js",
     "client": "School",
     "role": "Dev, Design",
-    "url": "",
-    "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6505897/lebonbon.jpg",
+    "url": "https://www.manolopecout.fr/works/techstory/",
+    "illustration": "https://www.manolopecout.fr/imgs/tech.png",
     "color": "#"
   }]
 };
@@ -15491,7 +15491,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderIllustration.vue":[function(require,module,exports) {
+},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderIllustration.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15591,7 +15591,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderSelector.vue":[function(require,module,exports) {
+},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/SliderSelector.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15694,7 +15694,7 @@ render._withStripped = true
       
       }
     })();
-},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/Slider.vue":[function(require,module,exports) {
+},{"../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Slider/Slider.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15856,7 +15856,7 @@ render._withStripped = true
       
       }
     })();
-},{"./SliderInfo.vue":"src/components/Work/Slider/SliderInfo.vue","./SliderIllustration.vue":"src/components/Work/Slider/SliderIllustration.vue","./SliderSelector.vue":"src/components/Work/Slider/SliderSelector.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkFooter.vue":[function(require,module,exports) {
+},{"./SliderInfo.vue":"src/components/Work/Slider/SliderInfo.vue","./SliderIllustration.vue":"src/components/Work/Slider/SliderIllustration.vue","./SliderSelector.vue":"src/components/Work/Slider/SliderSelector.vue","../../../stores/SliderStore.js":"src/stores/SliderStore.js","./slides.json":"src/components/Work/Slider/slides.json","_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/WorkFooter.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16006,7 +16006,7 @@ render._withStripped = true
       
       }
     })();
-},{"./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Work.vue":[function(require,module,exports) {
+},{"./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Work/Work.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16123,7 +16123,7 @@ render._withStripped = true
       
       }
     })();
-},{"./WorkHeader.vue":"src/components/Work/WorkHeader.vue","./Slider/Slider.vue":"src/components/Work/Slider/Slider.vue","./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/About/About.vue":[function(require,module,exports) {
+},{"./WorkHeader.vue":"src/components/Work/WorkHeader.vue","./Slider/Slider.vue":"src/components/Work/Slider/Slider.vue","./WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/About/About.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16241,7 +16241,7 @@ render._withStripped = true
       
       }
     })();
-},{"../Work/WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Lines.vue":[function(require,module,exports) {
+},{"../Work/WorkFooter.vue":"src/components/Work/WorkFooter.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/Lines.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16324,7 +16324,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/App.vue":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/App.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16420,7 +16420,7 @@ render._withStripped = true
       
       }
     })();
-},{"./components/Home/Home.vue":"src/components/Home/Home.vue","./components/Work/Work.vue":"src/components/Work/Work.vue","./components/About/About.vue":"src/components/About/About.vue","./components/Lines.vue":"src/components/Lines.vue","/Applications/MAMP/htdocs/Portfolio-Vue/assets/fonts/Vendetta.otf":[["Vendetta.6bc865c6.otf","assets/fonts/Vendetta.otf"],"assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/NotFound/NotFound.vue":[function(require,module,exports) {
+},{"./components/Home/Home.vue":"src/components/Home/Home.vue","./components/Work/Work.vue":"src/components/Work/Work.vue","./components/About/About.vue":"src/components/About/About.vue","./components/Lines.vue":"src/components/Lines.vue","/Applications/MAMP/htdocs/Portfolio-Vue/src/assets/fonts/Vendetta.otf":[["Vendetta.33c1f192.otf","src/assets/fonts/Vendetta.otf"],"src/assets/fonts/Vendetta.otf"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/components/NotFound/NotFound.vue":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16485,7 +16485,7 @@ render._withStripped = true
       
       }
     })();
-},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/routes/router-config.js":[function(require,module,exports) {
+},{"_css_loader":"node_modules/parcel/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.common.js"}],"src/routes/router-config.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -16547,7 +16547,7 @@ var app = new _vue.default({
     return h(_App.default);
   }
 }).$mount('#app');
-},{"vue":"node_modules/vue/dist/vue.common.js","./App":"src/App.vue","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./routes/router-config":"src/routes/router-config.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"vue":"node_modules/vue/dist/vue.common.js","./App":"src/App.vue","vue-router":"node_modules/vue-router/dist/vue-router.esm.js","./routes/router-config":"src/routes/router-config.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -16575,7 +16575,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57474" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49838" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -16750,5 +16750,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel-bundler/src/builtins/hmr-runtime.js","src/index.js"], null)
+},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","src/index.js"], null)
 //# sourceMappingURL=/src.a2b27638.js.map

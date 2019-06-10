@@ -8,7 +8,7 @@
             "client": "The Wild Bazar",
             "role": "Dev, Design",
             "url": "https://www.thewildbazar.com",
-            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6487255/dribbble_twb.jpg",
+            "illustration": "https://www.manolopecout.fr/imgs/twb.png",
             "color": "#"
         },
         {
@@ -19,7 +19,7 @@
             "client": "Janic Gourlet",
             "role": "Dev, Design",
             "url": "https://www.janicgourlet.fr",
-            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6502386/dribbble_shot_hd.jpg",
+            "illustration": "https://www.manolopecout.fr/imgs/mosa.png",
             "color": "#"
         },
         {
@@ -30,7 +30,7 @@
             "client": "School",
             "role": "Dev, Design",
             "url": "",
-            "illustration": "/assets/img/atw.png",
+            "illustration": "https://www.manolopecout.fr/imgs/atw.png",
             "color": "#"
         },
         {
@@ -41,7 +41,7 @@
             "client": "School",
             "role": "Dev, Design",
             "url": "https://www.manolopecout.fr/works/futuristic/",
-            "illustration": "/assets/img/futur.png",
+            "illustration": "https://www.manolopecout.fr/imgs/futur.png",
             "color": "#"
         },
         {
@@ -51,8 +51,8 @@
             "skills": "Html/Css/Js",
             "client": "School",
             "role": "Dev, Design",
-            "url": "",
-            "illustration": "https://cdn.dribbble.com/users/2606815/screenshots/6505897/lebonbon.jpg",
+            "url": "https://www.manolopecout.fr/works/techstory/",
+            "illustration": "https://www.manolopecout.fr/imgs/tech.png",
             "color": "#"
         }
 	]
